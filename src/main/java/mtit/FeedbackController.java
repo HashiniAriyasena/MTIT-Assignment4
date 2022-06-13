@@ -1,3 +1,6 @@
+package mtit;
+
+import mtit.Feedback;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,7 +22,8 @@ public class FeedbackController {
     @GetMapping(path = "/viewfeedbacks")
     public ResponseEntity<List<Feedback>> viewfeedback(@RequestParam Integer id){
 
-        return new ResponseEntity<List<Feedback>>(feedbackInterface.findById(id), HttpStatus.OK);
+      //  return new ResponseEntity<List<Feedback>>(feedbackInterface.findById(id), HttpStatus.OK);
+        return new ResponseEntity<List<Feedback>>((List<Feedback>) feedbackInterface.findAll(), HttpStatus.OK);
     }
 
 }

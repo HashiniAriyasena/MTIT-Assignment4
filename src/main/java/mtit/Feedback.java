@@ -1,8 +1,10 @@
-import org.springframework.data.annotation.Id;
+package mtit;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 
 @Entity
 public class Feedback {
@@ -56,14 +58,5 @@ public class Feedback {
         this.feedback = feedback;
     }
 
-    @Override
-    public String toString() {
-        return "Feedback{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", rate='" + rate + '\'' +
-                ", feedback='" + feedback + '\'' +
-                '}';
-    }
+
 }
